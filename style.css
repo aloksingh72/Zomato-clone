@@ -1,0 +1,116 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* General styling for the navbar */
+.navbar {
+    position: absolute; /* Changed to absolute */
+    top: 0;
+    width: 100%;
+    padding: 10px 20px;
+    z-index: 10; /* Ensures navbar is above the hero section */
+    background-color: transparent; /* Make the navbar transparent initially */
+    font-family: 'Helvetica', sans-serif;
+}
+
+.nav-ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    padding: 1.7rem 0px;
+    margin: 0;
+}
+
+/* Left side item */
+.items-left {
+    margin-right: auto;
+}
+
+/* Right side items */
+.items-right {
+    margin-left: 20px;
+}
+
+.nav-ul li a {
+    text-decoration: none;
+    color: white; /* White text to be visible over the image */
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-ul li a:hover {
+    color: #f63;
+}
+
+/* Hero section */
+.hero-container {
+    height: 473px;
+    width: 1647px   ;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: 1.4s;
+}
+
+/* When you scroll down, this sticky effect can be applied if desired */
+.sticky-nav {
+    position: fixed;
+    background-color: white; /* Add background on scroll */
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+.sticky-nav .nav-ul li a {
+    color: #333; /* Change to dark color on scroll */
+}
+
+.sticky-nav .nav-ul li a:hover {
+    color: #f63;
+}
+
+/* Contents container for the Zomato text */
+.contents-container {
+    position: absolute;
+     top: 23%;  /* Center vertically */
+    left: 50%;  /*Center horizontally */
+    transform: translate(-50%, -50%);  /* Shift the element back by 50% of its width and height for perfect centering */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 5;  /* Ensure it's above the image */
+}
+/* Zomato text styling */
+.comp-text {
+    background: transparent;
+    height: 60px;
+    width: 300px;
+    position: relative;
+}
+.comp-logo-text {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transition: 1.4s;
+}
+
