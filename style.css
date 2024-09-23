@@ -6,20 +6,20 @@
 }
 
 body {
+    font-family: 'Helvetica', sans-serif;
     width: 100vw;
     height: 100vh;
-    font-family: 'Helvetica', sans-serif;
+    overflow-x: hidden; /* Avoids horizontal scroll */
 }
 
 /* General styling for the navbar */
 .navbar {
-    position: absolute; /* Changed to absolute */
+    position: absolute;
     top: 0;
     width: 100%;
     padding: 10px 20px;
-    z-index: 10; /* Ensures navbar is above the hero section */
-    background-color: transparent; /* Make the navbar transparent initially */
-    font-family: 'Helvetica', sans-serif;
+    z-index: 10;
+    background-color: transparent; /* Transparent navbar on top of hero section */
 }
 
 .nav-ul {
@@ -27,9 +27,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     list-style: none;
-    width: 100%;
-    padding: 1.7rem 0px;
-    margin: 0;
+    padding: 1.7rem 0;
 }
 
 /* Left side item */
@@ -44,7 +42,7 @@ body {
 
 .nav-ul li a {
     text-decoration: none;
-    color: white; /* White text to be visible over the image */
+    color: white; /* White text to stand out on hero image */
     font-size: 16px;
     transition: color 0.3s ease;
 }
@@ -53,64 +51,164 @@ body {
     color: #f63;
 }
 
-/* Hero section */
-.hero-container {
-    height: 473px;
-    width: 1647px   ;
+/* Hero Section */
+.hero-section {
     position: relative;
+    height: 600px; /* Increased height for larger hero effect */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
-.hero-bg {
+.hero-container {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100%;
+    top: 0;
+    left: 0;
     width: 100%;
-    object-fit: cover;
-    transform: scale(1.1);
-    transition: 1.4s;
+    height: 100%;
+    z-index: 1;
 }
 
-/* When you scroll down, this sticky effect can be applied if desired */
+.hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Sticky Navbar when scrolling */
 .sticky-nav {
     position: fixed;
-    background-color: white; /* Add background on scroll */
+    background-color: white;
     color: #333;
     border-bottom: 1px solid #ddd;
+    z-index: 1000;
 }
 
 .sticky-nav .nav-ul li a {
-    color: #333; /* Change to dark color on scroll */
+    color: #333;
 }
 
 .sticky-nav .nav-ul li a:hover {
     color: #f63;
 }
 
-/* Contents container for the Zomato text */
+/* Zomato Text Styling */
 .contents-container {
-    position: absolute;
-     top: 23%;  /* Center vertically */
-    left: 50%;  /*Center horizontally */
-    transform: translate(-50%, -50%);  /* Shift the element back by 50% of its width and height for perfect centering */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    z-index: 5;  /* Ensure it's above the image */
-}
-/* Zomato text styling */
-.comp-text {
-    background: transparent;
-    height: 60px;
-    width: 300px;
     position: relative;
-}
-.comp-logo-text {
-    height: 100%;
+    z-index: 2; /* Make sure it's above the hero image */
+    text-align: center;
+    color: white;
     width: 100%;
-    object-fit: contain;
-    transition: 1.4s;
+    padding-top: 2rem;
 }
 
+/* Zomato logo */
+.comp-text {
+    margin-bottom: 1rem;
+}
+
+.comp-logo-text {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Sub-text below the logo */
+.sub-text {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.span-Noida {
+    font-weight: 600;
+    color: #ff645a;
+}
+
+/* SearchContainer */
+.searchContainer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.searchflex {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    background: rgb(255, 255, 255);
+    border-radius: 0.8rem;
+    box-shadow: rgba(28, 28, 28, 0.08) 0px 2px 8px;
+    border: 1px solid rgb(232, 232, 232);
+    width: 100%;
+    max-width: 70rem;
+}
+
+/* Left Search */
+.left-search {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+    gap: 0.5rem;
+}
+
+/* Location Icon */
+.loc-logo {
+    font-size: 1.5rem;
+    color: #ff645a;
+    cursor: pointer;
+}
+
+/* Input Text */
+.input-text {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+    width: 10rem;
+}
+
+/* Dropdown Icon */
+.dropdown-icon {
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Right Search */
+.right-search {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #ddd;
+    padding-left: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+/* Search Icon */
+.search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #ff645a;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+/* Search Input */
+.search-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    color: #333;
+    padding-right: 1rem;
+}
