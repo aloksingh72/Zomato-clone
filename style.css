@@ -9,7 +9,7 @@ body {
     font-family: 'Poppins', sans-serif;
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden; /* Avoids horizontal scroll */
+    overflow-x: hidden; /* To Avoids horizontal scroll */
 }
 
 /* General styling for the navbar */
@@ -622,35 +622,6 @@ margin-top: 80px;
 .list-item {
     height: 100px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Footer  sections */
