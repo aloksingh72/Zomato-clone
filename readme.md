@@ -1,6 +1,6 @@
 # Zomato Clone
 
-# code Live Project Link:- https://zomato-clone-ruby.vercel.app/
+# Live Project Link:- https://zomato-clone-ruby.vercel.app/
 
 A simple front-end clone of the Zomato website showcasing essential features and layouts. This project serves as a learning tool to implement HTML, CSS, and JavaScript for creating a responsive and visually appealing webpage.
 
