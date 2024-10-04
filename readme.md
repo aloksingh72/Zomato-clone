@@ -49,6 +49,6 @@ Zomato Clone/ ├── assets/ │ ├── heroBackgroundImage.jpg │ ├─
 
 1. Clone the repository.
    ```bash
-   git clone <https://github.com/aloksingh72/Zomato-clone/tree/main>
+   git clone <https://github.com/aloksingh72/Zomato-clone>
 
 
