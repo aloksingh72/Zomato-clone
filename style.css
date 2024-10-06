@@ -545,6 +545,10 @@ body {
   color: #666;
   margin-bottom: 20px;
 }
+input[type="radio"] {
+  accent-color: red;
+}
+
 
 /* Input Options */
 .input-option {
